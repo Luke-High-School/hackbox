@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-USER luke
+USER root
 
 ENV HOME /home/luke
 WORKDIR $HOME
@@ -7,10 +7,12 @@ WORKDIR $HOME
 
 ######### Customize Container Here ###########
 
-RUN sudo apt update
-RUN sudo apt -y upgrade
-RUN sudo apt -y install openvpn
-RUN sudo apt -y install unzip
+RUN apt update
+RUN apt -y upgrade
+RUN apt -y install openvpn
+RUN apt -y install unzip
+RUN apt -y install sudo
+RUN apt -y install xfce4
 
 # Change Background to sth cool
 COPY assets/mr-robot-wallpaper.png  /usr/share/extra/backgrounds/bg_default.png
