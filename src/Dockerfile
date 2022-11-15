@@ -13,6 +13,8 @@ RUN apt -y install openvpn
 RUN apt -y install unzip
 RUN apt -y install sudo
 RUN apt -y install xfce4
+RUN apt -y install wget
+RUN apt -y install git
 
 # Change Background to sth cool
 COPY assets/mr-robot-wallpaper.png  /usr/share/extra/backgrounds/bg_default.png
